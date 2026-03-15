@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ movie.title }}</title>
+    <link rel="stylesheet" href="/static/movie.css">
+</head>
+<body>
+
+<!-- ================= NETFLIX STYLE HERO ================= -->
+<section class="netflix-hero" style="background-image: url('{{ movie.banner_url }}');">
+    <div class="netflix-overlay">
+        <div class="netflix-hero-content">
+            <h1>{{ movie.title }}</h1>
+            <p class="hero-desc">{{ movie.description }}</p>
+
+            <button class="play-btn" onclick="openTrailer()">
+                ▶ Play
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ================= TRAILER MODAL ================= -->
+<div id="trailerModal" class="trailer-modal">
+    <div class="trailer-box">
+        <span class="close-btn" onclick="closeTrailer()">×</span>
+
+        <!-- IMPORTANT: iframe src is EMPTY initially -->
+        <iframe
+            id="trailerFrame"
+            src=""
+            frameborder="0"
+            allow="autoplay; encrypted-media; fullscreen"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+<!-- ================= MOVIE INFO TABLE ================= -->
+<section class="movie-info-wrapper">
+    <table class="movie-info-table">
+        <tr><th>Genre</th><td>{{ movie.genre }}</td></tr>
+        <tr><th>Language</th><td>{{ movie.language }}</td></tr>
+        <tr><th>Region</th><td>{{ movie.region }}</td></tr>
+        <tr><th>Release Year</th><td>{{ movie.release_year }}</td></tr>
+        <tr><th>Rating</th><td>{{ movie.rating }}</td></tr>
+        <tr><th>Director</th><td>{{ movie.director }}</td></tr>
+        <tr><th>Stars</th><td>{{ movie.stars }}</td></tr>
+    </table>
+</section>
+
+<!-- ================= TRAILER SCRIPT ================= -->
+<script>
+const trailerUrl = "{{ movie.trailer_url }}";
+
+function openTrailer() {
+    const modal = document.getElementById("trailerModal");
+    const iframe = document.getElementById("trailerFrame");
+
+    iframe.src = trailerUrl + "?autoplay=1";
+    modal.style.display = "flex";
+}
+
+// Close when clicking X or outside
+function closeTrailer() {
+    const modal = document.getElementById("trailerModal");
+    const iframe = document.getElementById("trailerFrame");
+
+    iframe.src = ""; // stop video
+    modal.style.display = "none";
+}
+
+// CLICK OUTSIDE TO CLOSE
+document.getElementById("trailerModal").addEventListener("click", function (e) {
+    if (e.target === this) {
+        closeTrailer();
+    }
+});
+</script>
+
+</body>
+</html>

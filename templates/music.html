@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Music</title>
+
+<style>
+
+body{
+background:#141414;
+color:white;
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:black;
+}
+
+.nav-left{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+.logo{
+color:#e50914;
+font-size:26px;
+font-weight:bold;
+}
+
+.nav-left a{
+color:white;
+text-decoration:none;
+font-size:15px;
+}
+
+.nav-left a:hover{
+color:#e50914;
+}
+
+.nav-right{
+display:flex;
+align-items:center;
+}
+
+/* SEARCH BAR */
+
+.search-form{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.search-form input{
+
+padding:10px 14px;
+width:260px;
+
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.2);
+
+border-radius:8px;
+color:white;
+
+backdrop-filter:blur(6px);
+
+outline:none;
+}
+
+.search-form input::placeholder{
+color:#ccc;
+}
+
+.search-form button{
+
+background:#e50914;
+color:white;
+
+border:none;
+padding:10px 16px;
+
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+
+}
+
+.search-form button:hover{
+background:#ff1f1f;
+}
+
+/* MUSIC GRID */
+
+.music-container{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.music-card{
+background:#1c1c1c;
+border-radius:10px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.music-card:hover{
+transform:scale(1.05);
+}
+
+.music-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.music-info{
+padding:12px;
+}
+
+.music-info h3{
+margin:5px 0;
+font-size:16px;
+}
+
+.music-info p{
+color:#bbb;
+font-size:14px;
+}
+
+.play-btn{
+display:inline-block;
+margin-top:8px;
+padding:6px 12px;
+background:#1DB954;
+color:white;
+text-decoration:none;
+border-radius:5px;
+font-size:14px;
+}
+
+.play-btn:hover{
+background:#1ed760;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="nav-left">
+
+<div class="logo">VIBE</div>
+
+<a href="{{ url_for('home') }}">Home</a>
+<a href="{{ url_for('shows') }}">Shows</a>
+<a href="{{ url_for('movies') }}">Movies</a>
+<a href="{{ url_for('music') }}">Music</a>
+<a href="{{ url_for('games') }}">Games</a>
+
+</div>
+
+<div class="nav-right">
+
+<form method="POST" class="search-form">
+
+<input
+type="text"
+name="song"
+placeholder="Search musics, movies..."
+>
+
+<button type="submit">
+Search
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- MUSIC GRID -->
+
+<div class="music-container">
+
+{% for song in songs %}
+
+<div class="music-card">
+
+<img id="img-{{loop.index}}" 
+src="https://via.placeholder.com/400x400?text=Loading">
+
+<div class="music-info">
+
+<h3>{{ song.title }}</h3>
+
+<p>{{ song.artist }}</p>
+
+<a class="play-btn" href="{{ song.spotify_url }}" target="_blank">
+▶ Play
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+<script id="songs-data" type="application/json">
+{{ songs | tojson }}
+</script>
+
+<script>
+
+/* LOAD SONG ALBUM IMAGES */
+
+const songs = JSON.parse(
+document.getElementById("songs-data").textContent
+);
+
+async function loadImages(){
+
+for(let i=0;i<songs.length;i++){
+
+let title = songs[i].title;
+let artist = songs[i].artist;
+
+try{
+
+let res = await fetch(
+`https://itunes.apple.com/search?term=${encodeURIComponent(title+" "+artist)}&entity=song&limit=1`
+);
+
+let data = await res.json();
+
+if(data.resultCount > 0){
+
+let img = data.results[0].artworkUrl100.replace("100x100","600x600");
+
+document.getElementById("img-"+(i+1)).src = img;
+
+}
+
+}catch(e){
+
+document.getElementById("img-"+(i+1)).src =
+"https://picsum.photos/400?random="+i;
+
+}
+
+}
+
+}
+
+loadImages();
+
+</script>
+
+</body>
+</html>

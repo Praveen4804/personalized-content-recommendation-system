@@ -1,0 +1,101 @@
+music_id,title,artist,genre,language,spotify_url,image
+1,Blinding Lights,The Weeknd,Pop,English,https://open.spotify.com/search/blinding%20lights,placeholder
+2,As It Was,Harry Styles,Pop,English,https://open.spotify.com/search/as%20it%20was%20harry%20styles,placeholder
+3,Levitating,Dua Lipa,Pop,English,https://open.spotify.com/search/levitating%20dua%20lipa,placeholder
+4,Golden,Harry Styles,Pop,English,https://open.spotify.com/search/golden%20harry%20styles,placeholder
+5,Anti-Hero,Taylor Swift,Pop,English,https://open.spotify.com/search/anti%20hero%20taylor%20swift,placeholder
+6,Flowers,Miley Cyrus,Pop,English,https://open.spotify.com/search/flowers%20miley%20cyrus,placeholder
+7,Shape of You,Ed Sheeran,Pop,English,https://open.spotify.com/search/shape%20of%20you%20ed%20sheeran,placeholder
+8,Perfect,Ed Sheeran,Romance,English,https://open.spotify.com/search/perfect%20ed%20sheeran,placeholder
+9,Photograph,Ed Sheeran,Romance,English,https://open.spotify.com/search/photograph%20ed%20sheeran,placeholder
+10,Love Yourself,Justin Bieber,Romance,English,https://open.spotify.com/search/love%20yourself%20justin%20bieber,placeholder
+11,Shallow,Lady Gaga,Romance,English,https://open.spotify.com/search/shallow%20lady%20gaga,placeholder
+12,Someone You Loved,Lewis Capaldi,Romance,English,https://open.spotify.com/search/someone%20you%20loved%20lewis%20capaldi,placeholder
+13,Memories,Maroon 5,Pop,English,https://open.spotify.com/search/memories%20maroon%205,placeholder
+14,Closer,The Chainsmokers,Pop,English,https://open.spotify.com/search/closer%20chainsmokers,placeholder
+15,Counting Stars,OneRepublic,Pop,English,https://open.spotify.com/search/counting%20stars%20onerepublic,placeholder
+16,Believer,Imagine Dragons,Pop,English,https://open.spotify.com/search/believer%20imagine%20dragons,placeholder
+17,Thunder,Imagine Dragons,Pop,English,https://open.spotify.com/search/thunder%20imagine%20dragons,placeholder
+18,Heat Waves,Glass Animals,Pop,English,https://open.spotify.com/search/heat%20waves%20glass%20animals,placeholder
+19,Calm Down,Rema,Pop,English,https://open.spotify.com/search/calm%20down%20rema,placeholder
+20,Water,Tyla,Pop,English,https://open.spotify.com/search/water%20tyla,placeholder
+21,Arabic Kuthu,Anirudh Ravichander,Party,Tamil,https://open.spotify.com/search/arabic%20kuthu,placeholder
+22,Vaathi Coming,Anirudh Ravichander,Action,Tamil,https://open.spotify.com/search/vaathi%20coming,placeholder
+23,Rowdy Baby,Yuvan Shankar Raja,Pop,Tamil,https://open.spotify.com/search/rowdy%20baby,placeholder
+24,Enjoy Enjaami,Dhee,Indie,Tamil,https://open.spotify.com/search/enjoy%20enjaami,placeholder
+25,Kutty Story,Anirudh Ravichander,Pop,Tamil,https://open.spotify.com/search/kutty%20story,placeholder
+26,So Baby,Anirudh Ravichander,Romance,Tamil,https://open.spotify.com/search/so%20baby%20anirudh,placeholder
+27,Donu Donu Donu,Anirudh Ravichander,Party,Tamil,https://open.spotify.com/search/donu%20donu%20donu,placeholder
+28,Selfie Pulla,Vijay,Party,Tamil,https://open.spotify.com/search/selfie%20pulla,placeholder
+29,Kanave Kanave,Anirudh Ravichander,Melody,Tamil,https://open.spotify.com/search/kanave%20kanave,placeholder
+30,Jimikki Ponnu,Thaman S,Romance,Tamil,https://open.spotify.com/search/jimikki%20ponnu,placeholder
+31,Megham Karukatha,Dhanush,Melody,Tamil,https://open.spotify.com/search/megham%20karukatha,placeholder
+32,Vaathi Raid,Anirudh Ravichander,Action,Tamil,https://open.spotify.com/search/vaathi%20raid,placeholder
+33,Master The Blaster,Anirudh Ravichander,Action,Tamil,https://open.spotify.com/search/master%20the%20blaster,placeholder
+34,Chill Bro,Anirudh Ravichander,Pop,Tamil,https://open.spotify.com/search/chill%20bro,placeholder
+35,Othaiyadi Pathayila,Dhibu Ninan Thomas,Romance,Tamil,https://open.spotify.com/search/othaiyadi%20pathayila,placeholder
+36,Rakita Rakita Rakita,Anirudh Ravichander,Party,Tamil,https://open.spotify.com/search/rakita%20rakita%20rakita,placeholder
+37,Two Two Two,Anirudh Ravichander,Pop,Tamil,https://open.spotify.com/search/two%20two%20two,placeholder
+38,Private Party,Anirudh Ravichander,Party,Tamil,https://open.spotify.com/search/private%20party%20anirudh,placeholder
+39,Jalabulajangu,Anirudh Ravichander,Party,Tamil,https://open.spotify.com/search/jalabulajangu,placeholder
+40,Why This Kolaveri Di,Anirudh Ravichander,Pop,Tamil,https://open.spotify.com/search/kolaveri,placeholder
+41,Malare,Vijay Yesudas,Romance,Malayalam,https://open.spotify.com/search/malare,placeholder
+42,Aaradhike,Sithara Krishnakumar,Romance,Malayalam,https://open.spotify.com/search/aaradhike,placeholder
+43,Jimikki Kammal,Vineeth Sreenivasan,Party,Malayalam,https://open.spotify.com/search/jimikki%20kammal,placeholder
+44,Neela Nilave,Shaan Rahman,Romance,Malayalam,https://open.spotify.com/search/neela%20nilave,placeholder
+45,Parayuva,Sid Sriram,Romance,Malayalam,https://open.spotify.com/search/parayuva,placeholder
+46,Uyiril Thodum,Sooraj Santhosh,Romance,Malayalam,https://open.spotify.com/search/uyiril%20thodum,placeholder
+47,Pavizha Mazha,KS Harisankar,Melody,Malayalam,https://open.spotify.com/search/pavizha%20mazha,placeholder
+48,Thaniye,Gopi Sundar,Romance,Malayalam,https://open.spotify.com/search/thaniye,placeholder
+49,Manikya Malaraya Poovi,Vineeth Sreenivasan,Romance,Malayalam,https://open.spotify.com/search/manikya%20malaraya,placeholder
+50,Kudukku,Dabzee,Pop,Malayalam,https://open.spotify.com/search/kudukku,placeholder
+51,Darshana,Hesham Abdul Wahab,Romance,Malayalam,https://open.spotify.com/search/darshana%20malayalam,placeholder
+52,Puthiyoru Pathayil,Sooraj Santhosh,Melody,Malayalam,https://open.spotify.com/search/puthiyoru%20pathayil,placeholder
+53,Aaro Nenjil,Gopi Sundar,Romance,Malayalam,https://open.spotify.com/search/aaro%20nenjil,placeholder
+54,Nee Himamazhayayi,Najim Arshad,Romance,Malayalam,https://open.spotify.com/search/nee%20himamazhayayi,placeholder
+55,Kalapakkaara,Jakes Bejoy,Party,Malayalam,https://open.spotify.com/search/kalapakkaara,placeholder
+56,Kannil Kannil,Hesham Abdul Wahab,Romance,Malayalam,https://open.spotify.com/search/kannil%20kannil,placeholder
+57,Illuminati,Dabzee,Pop,Malayalam,https://open.spotify.com/search/illuminati%20dabzee,placeholder
+58,Thallumaala Paattu,Vishnu Vijay,Party,Malayalam,https://open.spotify.com/search/thallumaala%20paattu,placeholder
+59,Onakka Munthiri,Vineeth Sreenivasan,Pop,Malayalam,https://open.spotify.com/search/onakka%20munthiri,placeholder
+60,Neelambari,Amritha Suresh,Romance,Malayalam,https://open.spotify.com/search/neelambari%20malayalam,placeholder
+61,Naatu Naatu,MM Keeravani,Action,Telugu,https://open.spotify.com/search/naatu%20naatu,placeholder
+62,Butta Bomma,Armaan Malik,Romance,Telugu,https://open.spotify.com/search/butta%20bomma,placeholder
+63,Samajavaragamana,Sid Sriram,Romance,Telugu,https://open.spotify.com/search/samajavaragamana,placeholder
+64,Ramulo Ramulaa,Anurag Kulkarni,Party,Telugu,https://open.spotify.com/search/ramulo%20ramulaa,placeholder
+65,Srivalli,Sid Sriram,Romance,Telugu,https://open.spotify.com/search/srivalli,placeholder
+66,Saami Saami,Mounika Yadav,Party,Telugu,https://open.spotify.com/search/saami%20saami,placeholder
+67,Inkem Inkem Inkem Kaavaale,Sid Sriram,Romance,Telugu,https://open.spotify.com/search/inkem%20inkem,placeholder
+68,Undiporaadhey,Sid Sriram,Romance,Telugu,https://open.spotify.com/search/undiporaadhey,placeholder
+69,Vachinde,Madhu Priya,Party,Telugu,https://open.spotify.com/search/vachinde,placeholder
+70,Seeti Maar,Jaspreet Jasz,Party,Telugu,https://open.spotify.com/search/seeti%20maar,placeholder
+71,Top Lesi Poddi,Sagar,Party,Telugu,https://open.spotify.com/search/top%20lesi%20poddi,placeholder
+72,Pakka Local,Geetha Madhuri,Party,Telugu,https://open.spotify.com/search/pakka%20local,placeholder
+73,Blockbuster,Nakash Aziz,Party,Telugu,https://open.spotify.com/search/blockbuster%20telugu,placeholder
+74,Rangasthalam Title Track,Devi Sri Prasad,Action,Telugu,https://open.spotify.com/search/rangasthalam%20title%20track,placeholder
+75,Jai Balayya,Thaman S,Action,Telugu,https://open.spotify.com/search/jai%20balayya,placeholder
+76,Dheera Dheera,MM Keeravani,Action,Telugu,https://open.spotify.com/search/dheera%20dheera,placeholder
+77,Nee Kannu Neeli Samudram,Javed Ali,Romance,Telugu,https://open.spotify.com/search/nee%20kannu%20neeli,placeholder
+78,Buttabomma Reprise,Armaan Malik,Romance,Telugu,https://open.spotify.com/search/butta%20bomma%20reprise,placeholder
+79,Bullet Song,Simbu,Party,Telugu,https://open.spotify.com/search/bullet%20song%20telugu,placeholder
+80,Daakko Daakko Meka,Sivam,Action,Telugu,https://open.spotify.com/search/daakko%20daakko%20meka,placeholder
+81,Ra Ra Rakkamma,Nakash Aziz,Party,Kannada,https://open.spotify.com/search/ra%20ra%20rakkamma,placeholder
+82,Belageddu,Chetan Sosca,Melody,Kannada,https://open.spotify.com/search/belageddu,placeholder
+83,Kannu Hodiyaka,Shreya Ghoshal,Romance,Kannada,https://open.spotify.com/search/kannu%20hodiyaka,placeholder
+84,Dorassani,Vijay Prakash,Romance,Kannada,https://open.spotify.com/search/dorassani,placeholder
+85,Karabuu,Chandan Shetty,Party,Kannada,https://open.spotify.com/search/karabuu,placeholder
+86,Yaare Yaare,Armaan Malik,Romance,Kannada,https://open.spotify.com/search/yaare%20yaare,placeholder
+87,Hands Up,Vijay Prakash,Party,Kannada,https://open.spotify.com/search/hands%20up%20kannada,placeholder
+88,Salaam Rocky Bhai,Vijay Prakash,Action,Kannada,https://open.spotify.com/search/salaam%20rocky%20bhai,placeholder
+89,Jokae Nannu Balliya,Sunitha,Melody,Kannada,https://open.spotify.com/search/jokae%20nannu%20balliya,placeholder
+90,Bombe Helutaithe,Sonu Nigam,Romance,Kannada,https://open.spotify.com/search/bombe%20helutaithe,placeholder
+91,Nee Sigoovaregu,Sid Sriram,Romance,Kannada,https://open.spotify.com/search/nee%20sigoovaregu,placeholder
+92,Jagave Neenu Gelathiye,Sid Sriram,Romance,Kannada,https://open.spotify.com/search/jagave%20neenu%20gelathiye,placeholder
+93,Tick Tick Tick,Kailash Kher,Party,Kannada,https://open.spotify.com/search/tick%20tick%20tick%20kannada,placeholder
+94,Shiva Shiva,Vijay Prakash,Action,Kannada,https://open.spotify.com/search/shiva%20shiva%20kannada,placeholder
+95,Feel The Power,Santhosh Venky,Action,Kannada,https://open.spotify.com/search/feel%20the%20power%20kannada,placeholder
+96,Open The Bottle,Vijay Prakash,Party,Kannada,https://open.spotify.com/search/open%20the%20bottle%20kannada,placeholder
+97,Yenammi Yenammi,Vijay Prakash,Romance,Kannada,https://open.spotify.com/search/yenammi%20yenammi,placeholder
+98,Anisuthide,Sonu Nigam,Melody,Kannada,https://open.spotify.com/search/anisuthide,placeholder
+99,Baana Daariyalli,Chetan Sosca,Melody,Kannada,https://open.spotify.com/search/baana%20daariyalli,placeholder
+100,Neene Modalu,Shreya Ghoshal,Romance,Kannada,https://open.spotify.com/search/neene%20modalu,placeholder

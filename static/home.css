@@ -1,0 +1,644 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= NAVBAR (NETFLIX STYLE) ================= */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.15)
+  );
+
+  z-index: 1000;
+}
+
+/* LEFT SIDE */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.logo {
+  color: #e50914;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-link {
+  color: #e5e5e5;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff;
+}
+
+/* ================= NAV SEARCH ================= */
+.nav-search {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  padding: 6px 8px;
+
+  backdrop-filter: blur(10px);
+  transition: border .25s ease, box-shadow .25s ease;
+}
+
+.search-container:focus-within {
+  border-color: rgba(255,255,255,0.35);
+  box-shadow: 0 0 0 1px rgba(229,9,20,0.5);
+}
+
+#searchInput {
+  width: 260px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+#searchInput::placeholder {
+  color: #b3b3b3;
+}
+
+#voiceBtn {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#voiceBtn:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+#voiceBtn.listening {
+  background: #e50914;
+  box-shadow: 0 0 15px rgba(229,9,20,0.9);
+}
+
+#searchBtn {
+  background: rgba(229,9,20,0.85);
+  border: none;
+  color: #fff;
+  padding: 7px 14px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#searchBtn:hover {
+  background: rgb(229,9,20);
+}
+
+/* ================= SEARCH RESULTS ================= */
+#searchResults {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  background: #181818;
+  border-radius: 6px;
+  display: none;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.search-item {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-item:hover {
+  background: #333;
+}
+
+/* ================= HERO BANNER ================= */
+.hero-banner {
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  /* navbar overlay spacing */
+  padding-top: 70px;
+}
+
+.hero-banner .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.25)
+  );
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
+  max-width: 520px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.play-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 26px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* ================= ROWS ================= */
+h2 {
+  margin: 25px 20px 10px;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  padding: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.row img {
+  height: 180px;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+.row img:hover {
+  transform: scale(1.25);
+}
+
+/* ================= ALL MOVIES GRID ================= */
+.all-movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.movie-card img:hover {
+  transform: scale(1.1);
+}
+
+/* ================= TOAST ================= */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.85);
+  padding: 10px 22px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+/* ================= GOOGLE STYLE VOICE UI ================= */
+.voice-listening {
+  position: fixed;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  display: none;
+  z-index: 9999;
+}
+
+.voice-listening.active {
+  display: block;
+}
+
+.mic-core {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 56px;
+  height: 56px;
+  background: #ff1744;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255,23,68,0.9);
+}
+
+.pulse-ring {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,23,68,0.7);
+  animation: pulse 1.6s infinite ease-out;
+}
+
+.pulse-ring.delay {
+  animation-delay: 0.8s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.4); opacity: 1; }
+  100% { transform: scale(1.2); opacity: 0; }
+}
+
+/* ================= FULL HERO BANNER FIX ================= */
+
+/* Make hero banner full screen */
+.hero-banner {
+  height: 100vh;
+  min-height: 100vh;
+  padding-top: 0;
+}
+
+/* Ensure background image fully covers screen */
+.hero-banner {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Push hero content slightly down to avoid navbar overlap */
+.hero-content {
+  bottom: 90px;
+}
+
+/* Keep overlay covering full screen */
+.hero-banner .overlay {
+  height: 100vh;
+}
+
+/* ================= LIVE SEARCH DROPDOWN FIX ================= */
+
+/* Ensure search results appear above hero banner */
+#searchResults {
+  z-index: 5000;
+}
+
+/* Ensure search container is the stacking context */
+.search-container {
+  position: relative;
+  z-index: 5000;
+}
+
+/* Prevent hero overlay from covering dropdown */
+.hero-banner,
+.hero-banner .overlay {
+  pointer-events: none;
+}
+/* FORCE SEARCH DROPDOWN TO BE VISIBLE ABOVE EVERYTHING */
+#searchResults {
+  display: block;
+  position: fixed;
+  top: 60px;
+  right: 40px;
+  width: 260px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 99999;
+}
+
+.search-container {
+  z-index: 99999;
+}
+
+.hero-banner,
+.hero-banner .overlay {
+  pointer-events: none;
+}
+
+#searchResults {
+  display: block;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  background: #181818;
+  z-index: 99999;
+}
+
+/* ================= FULL SCREEN HERO BANNER (HOME + MOVIE) ================= */
+
+/* Make hero banner true full screen */
+.hero-banner {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 0 !important;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay must also cover full screen */
+.hero-banner .overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* Keep text visible above banner */
+.hero-content {
+  position: absolute;
+  bottom: 90px;
+  left: 60px;
+  z-index: 2;
+  max-width: 600px;
+}
+
+/* Navbar should float above banner */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.filter-section{
+display:flex;
+justify-content:center;
+margin:20px 0;
+}
+
+.filter-bar{
+display:flex;
+gap:12px;
+}
+
+.filter-bar select{
+padding:8px 12px;
+border-radius:6px;
+border:none;
+background:#222;
+color:white;
+}
+
+.filter-bar button{
+background:#e50914;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.filter-bar button:hover{
+background:#b20710;
+}
+.filter-nav{
+display:flex;
+gap:10px;
+margin-right:20px;
+}
+
+.filter-nav select{
+background:#222;
+color:white;
+border:none;
+padding:6px 10px;
+border-radius:6px;
+}
+
+.filter-nav button{
+background:#e50914;
+border:none;
+color:white;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.filter-nav button:hover{
+background:#b20710;
+}
+
+.reset-filter{
+color:#e50914;
+cursor:pointer;
+margin:10px 0;
+}
+
+.reset-filter:hover{
+text-decoration:underline;
+}
+
+.row{
+display:flex;
+gap:15px;
+overflow-x:auto;
+}
+
+.row a img{
+width:150px;
+height:225px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.all-movies-grid{
+display:grid;
+grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+gap:10px;
+}
+.filter-nav{
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.filter-nav select{
+  background: #222;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.filter-nav button{
+  background: #e50914;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-nav button:hover{
+  background: #b20710;
+}
+
+.reset-filter {
+  color: #e50914;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.reset-filter:hover {
+  text-decoration: underline;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.filter-nav{
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.filter-nav select{
+  background: #222;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.filter-nav button{
+  background: #e50914;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-nav button:hover{
+  background: #b20710;
+}
+
+.reset-filter {
+  color: #e50914;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.reset-filter:hover {
+  text-decoration: underline;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.reset-filter {
+  color: #e50914;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.reset-filter:hover {
+  text-decoration: underline;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.row a img {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.all-movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
